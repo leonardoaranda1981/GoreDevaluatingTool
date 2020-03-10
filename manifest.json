@@ -1,0 +1,56 @@
+{   "name": "GoreDevaluatingTool",    
+	"version": "1.0", 
+	"description": "Block drug cartles from spreading the fear!",   
+	"manifest_version": 2,
+	"web_accessible_resources":[
+		"remplazo/*",
+		"model",
+		"model/metadata.json",
+		"model/model.json",
+		"model/weights.bin"
+	],
+	 "permissions": [
+	 	"storage", 
+	 	"webNavigation",
+	 	"tabs",
+	 	"activeTab",
+        "notifications",
+        "contentSettings", "tabs",
+        "http://*/",
+        "https://*/"
+	 ],
+	"content_scripts": [ {
+		"matches":[
+			"<all_urls>"
+			], "js":[
+				//"js/jquery-3.4.1.min.js",           
+				//"js/p5.min.js",   
+				//"js/p5.dom.min.js",
+				"js/tf.min.js",
+				"js/teachablemachine-image.min.js",           
+			    //"js/ml5.min.js",                       
+			    "js/background.js" 
+			]        
+		 
+		} 
+		     
+	 ],
+
+	"page_action": {        
+		//"default_popup": "popup.html",        
+		"default_icon": {            
+			"16": "images/16.png",            
+			"32": "images/32.png",            
+			"48": "images/48.png",            
+			"128": "images/128.png"        
+		}    
+	},    
+	"icons": {        
+		"16": "images/16.png",        
+		"32": "images/32.png",        
+		"48": "images/48.png",        
+		"128": "images/128.png"    
+	}
+
+	//, 	"options_page": "options.html"
+}
