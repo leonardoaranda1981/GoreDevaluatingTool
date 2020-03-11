@@ -87,7 +87,7 @@ async function predict(img, ele) {
         }
      	//const classPrediction = img.src+": "+prediction[idEtiqueta].className + ": " + maxVal;
         //console.log(classPrediction);
-        if (maxVal > .7){
+        if (maxVal > .85){
             const classPrediction = img.src+": "+prediction[idEtiqueta].className + ": " + maxVal;
            // console.log(classPrediction);
             replaceImage(idEtiqueta, ele);

@@ -1,5 +1,5 @@
 {   "name": "GoreDevaluatingTool",    
-	"version": "1.0", 
+	"version": "0.0.1", 
 	"description": "Block drug cartles from spreading the fear!",   
 	"manifest_version": 2,
 	"web_accessible_resources":[
@@ -10,25 +10,32 @@
 		"model/weights.bin"
 	],
 	 "permissions": [
-	 	"storage", 
-	 	"webNavigation",
-	 	"tabs",
-	 	"activeTab",
-        "notifications",
-        "contentSettings", "tabs",
-        "http://*/",
-        "https://*/"
+	 	
 	 ],
 	"content_scripts": [ {
 		"matches":[
-			"<all_urls>"
+			"https://elblogdelnarco.com/*", "http://www.hidrocalidodigital.com/*",
+			"https://www.elsoldemexico.com.mx/*", "http://www.heraldo.mx/*", 
+			"https://www.lja.mx/*", "http://www.elaguas.com/*", 
+			"https://pagina24.com.mx/*", "https://www.diariodemorelos.com/*", "https://www.capitalmexico.com.mx/*", 
+			"https://www.elregional.com.mx/*", "https://www.elsoldecuernavaca.com.mx/*", 
+			"https://www.elsoldecuautla.com.mx/*", "https://www.elsoldecuautla.com.mx/*", 
+			"https://www.launion.com.mx/*", "https://www.el-mexicano.com.mx/*",
+			"https://www.elimparcial.com/tijuana/*","https://www.elsoldetijuana.com.mx/*", 
+			"https://www.jornadabc.mx/","https://www.lavozdelafrontera.com.mx/*",
+			"https://www.elimparcial.com/mexicali/*", "http://monitoreconomico.org/noticias/*", 
+			"https://www.elvigia.net/*", "https://www.elsudcaliforniano.com.mx/*", "https://tribunadeloscabos.com.mx/*",
+			"http://tribunacampeche.com/*", "http://laisureste.com/noticias-campeche/*", "https://www.novedadescampeche.com.mx/*", 
+			"https://www.elsur.mx/*", "http://www.cronicacampeche.com/*", "http://expresocampeche.com/*", "http://campechehoy.mx/*", 
+			"https://www.cuartopoder.mx/*", "https://diariodechiapas.com/*", "http://www.chiapashoy.com.mx/*", 
+			"https://www.elheraldodechiapas.com.mx/*", "http://expresochiapas.com/*", "https://www.elsoldechiapas.com/*", 
+			"https://diariolavozdelsureste.com/*", "https://esdiario.com.mx/*", "https://www.sie7edechiapas.com/*", 
+			"http://www.diariocontrapoderenchiapas.com/*", "http://www.periodicoelvespertino.com/*", "https://ultimatumchiapas.com/*", 
+			"https://portavozchiapas.com.mx/*", "https://elorbe.com/*", "https://www.noticiasdechiapas.com.mx/*", 
+			"http://www.diarioacontecerchiapaneco.com/*", "http://www.diariodecomitan.com.mx/*", "https://www.diariodelsur.com.mx/*" 
 			], "js":[
-				//"js/jquery-3.4.1.min.js",           
-				//"js/p5.min.js",   
-				//"js/p5.dom.min.js",
 				"js/tf.min.js",
-				"js/teachablemachine-image.min.js",           
-			    //"js/ml5.min.js",                       
+				"js/teachablemachine-image.min.js",                                  
 			    "js/background.js" 
 			]        
 		 
@@ -37,7 +44,7 @@
 	 ],
 
 	"page_action": {        
-		//"default_popup": "popup.html",        
+		       
 		"default_icon": {            
 			"16": "images/16.png",            
 			"32": "images/32.png",            
@@ -51,6 +58,4 @@
 		"48": "images/48.png",        
 		"128": "images/128.png"    
 	}
-
-	//, 	"options_page": "options.html"
 }
